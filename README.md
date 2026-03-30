@@ -31,14 +31,9 @@
 
 > *Interactive TUI: paste your DO API key, select source and destination, sync with live progress.*
 
-## Why
+## What It Does
 
-DigitalOcean Spaces Cold Storage costs **$0.007/GiB/month** — 3x cheaper than standard Spaces at $0.02/GiB/month. But there's no built-in migration tool. `CopyObject` doesn't work across storage tiers. This tool handles it:
-
-- **GET** from standard Spaces
-- **Stream** directly to Cold Storage (no memory buffering)
-- **Verify** every object after transfer
-- **Auto-repair** anything missing or mismatched
+Copies objects from a DigitalOcean Spaces bucket to a Spaces Cold Storage bucket. Streams data directly without buffering, verifies every object, and automatically re-transfers anything missing or mismatched.
 
 
 ## Install

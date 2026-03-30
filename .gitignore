@@ -1,0 +1,7 @@
+/target
+.DS_Store
+.do-cold-sync/
+.env
+.env.local
+.idea/
+.vscode/

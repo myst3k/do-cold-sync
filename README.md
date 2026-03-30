@@ -223,7 +223,13 @@ do-cold-sync --source my-space --dest my-cold-space --source-region nyc3 --prefi
 
 Before using this tool, you need:
 
-1. **A DigitalOcean API key** — Create a Personal Access Token in the [DO Console](https://cloud.digitalocean.com/account/api/tokens) with Spaces read/update permissions and Spaces Key create permissions
+1. **A DigitalOcean API key** — Create a Custom Scoped Personal Access Token in the [DO Console](https://cloud.digitalocean.com/account/api/tokens) with these scopes:
+
+   | Scope | Permission | Why |
+   |-------|------------|-----|
+   | `spaces` | read, update | List buckets, read/write objects |
+   | `spaces_key` | create, read, delete | Create and clean up temporary access keys |
+
 2. **A Cold Storage bucket** — Create one in the [DO Console](https://cloud.digitalocean.com/spaces) (cold storage buckets cannot be created via API)
 3. **A Droplet or machine** with network access to both buckets
 
